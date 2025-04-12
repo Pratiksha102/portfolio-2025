@@ -20,7 +20,7 @@ const projects = [
   {
     title: "Rule Zero",
     description:
-      "An admin dashboard built using Next.js and shadcn/ui. Supports managing users, orders, and product inventory efficiently.",
+      "A legal document management dashboard built using Next.js and shadcn/ui. Integrated with an LLM-powered backend to summarize contracts, detect clause differences, and assist legal teams with quick insights. Features user access control, version tracking, and seamless document uploads.",
     tags: ["Next.js", "shadcn/ui", "TypeScript"],
     link: "#",
   },
