@@ -28,13 +28,15 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-white/80 text-lg max-w-xl mx-auto mb-8"
         >
-        I am open to collaboration opportunities, freelance projects, or professional discussions
+          I am open to collaboration opportunities, freelance projects, or professional discussions
         </motion.p>
 
         {/* Social Links */}
         <div className="flex justify-center space-x-6">
           <motion.a
-            href="https://github.com/yourusername"
+            href="https://github.com/Pratiksha102"
+            target="_blank" // Open link in new tab
+            rel="noopener noreferrer" // Security precaution
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
@@ -45,7 +47,9 @@ const Contact = () => {
           </motion.a>
 
           <motion.a
-            href="https://linkedin.com/in/yourusername"
+            href="https://www.linkedin.com/in/pratiksha-/"
+            target="_blank" // Open link in new tab
+            rel="noopener noreferrer" // Security precaution
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
@@ -57,6 +61,8 @@ const Contact = () => {
 
           <motion.a
             href="mailto:pratiksha.gupta15@gmail.com"
+            target="_blank" // Open link in new tab
+            rel="noopener noreferrer" // Security precaution
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
