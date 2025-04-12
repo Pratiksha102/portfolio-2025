@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sora } from "next/font/google";
+import { Link } from "react-scroll"; // Importing Link from react-scroll
 
 const sora = Sora({
   subsets: ["latin"],
@@ -57,7 +58,7 @@ const HeroSection = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className={`${sora.className} text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl`}
         >
-        Passionate about crafting intuitive user experiences, building scalable web applications, and shaping products that solve real problems—blending design thinking, development, and product strategy.
+          Passionate about crafting intuitive user experiences, building scalable web applications, and shaping products that solve real problems—blending design thinking, development, and product strategy.
         </motion.p>
 
         <motion.div
@@ -65,12 +66,15 @@ const HeroSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <Button
-            asChild
-            className="bg-purple-600 text-white font-bold px-8 py-4 rounded-full hover:bg-purple-500 transition-all shadow-lg"
+          {/* Scroll to Projects section using react-scroll */}
+          <Link
+            to="projects" // 'projects' is the ID of the section you want to scroll to
+            smooth={true} // Enables smooth scrolling
+            duration={500} // Time for scroll animation
+            className="bg-purple-600 text-white font-bold px-8 py-4 rounded-full hover:bg-purple-500 transition-all shadow-lg cursor-pointer"
           >
-            <a href="#projects">View My Work</a>
-          </Button>
+            View My Work
+          </Link>
         </motion.div>
       </div>
     </section>

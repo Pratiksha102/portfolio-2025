@@ -35,7 +35,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="bg-black py-16 px-6 md:px-12 relative overflow-hidden">
+    <section className="bg-black py-16 px-6 md:px-12 relative overflow-hidden" id="projects" >
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-black opacity-40 animate-gradient" />
 
       <h2 className="text-4xl font-bold text-center mb-16 text-white tracking-wider">
