@@ -92,7 +92,7 @@ const Contact = () => {
         </motion.p>
 
         <motion.a
-          href="mailto:you@example.com"
+          href="mailto:pratiksha.gupta15@gmail.com"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
@@ -103,7 +103,7 @@ const Contact = () => {
               "0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.1)",
           }}
         >
-          you@example.com
+          pratiksha.gupta15@gmail.com
         </motion.a>
       </div>
     </section>

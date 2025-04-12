@@ -11,17 +11,12 @@ const caseStudies = [
     link: "/case-studies/fitness-retention",
   },
   {
-    title: "Checkout Funnel Optimization",
+    title: "Transport Simple",
     summary:
       "Analyzed drop-offs and redesigned the payment flow, increasing successful checkouts by 22%.",
     link: "/case-studies/checkout-optimization",
   },
-  {
-    title: "Launching a New B2B SaaS Product",
-    summary:
-      "Managed MVP launch, collaborating across design, dev, and marketing to achieve 1K+ signups in 2 months.",
-    link: "/case-studies/saas-launch",
-  },
+ 
 ];
 
 const CaseStudies = () => {

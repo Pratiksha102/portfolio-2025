@@ -4,20 +4,20 @@ import { Card } from "@/components/ui/card"; // Assuming Card component is avail
 
 const experiences = [
   {
-    title: "Software Developer at XYZ Corp.",
-    period: "Jan 2021 - Present",
+    title: "Frontend Developer at Thoughtclan Technologies.",
+    period: "June 2022 - Present",
     description:
       "Developed scalable web applications using React and Node.js, integrated REST APIs, and worked on performance optimization and user interface improvements.",
   },
   {
-    title: "Frontend Developer at ABC Ltd.",
-    period: "Jun 2019 - Dec 2020",
+    title: "FullStack Developer at Infosys.",
+    period: "Nov 2020 - June 2022",
     description:
       "Led frontend development efforts for a SaaS product, using Angular and TypeScript to build dynamic, responsive, and user-friendly interfaces.",
   },
   {
-    title: "Intern at Tech Innovations",
-    period: "Jan 2019 - May 2019",
+    title: "Intern at Infosys",
+    period: "Feb 2020 - March 2020",
     description:
       "Assisted in the development of a mobile app with React Native, contributed to bug fixes and UI enhancements, and participated in code reviews.",
   },

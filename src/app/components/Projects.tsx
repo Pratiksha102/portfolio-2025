@@ -4,21 +4,28 @@ import { Card } from "@/components/ui/card";
 
 const projects = [
   {
-    title: "Hospital Management System",
+    title: "MOC Oncocare Center",
     description:
       "A comprehensive hospital management app built using React and Firebase. Includes appointment scheduling, patient records, and dashboards.",
     tags: ["React", "Firebase", "Tailwind"],
     link: "https://github.com/yourusername/hospital-app",
   },
   {
-    title: "Personal Portfolio",
+    title: "BYG Brewsky (Bob's Bar, Jollygunj)",
     description:
       "My personal portfolio built with Next.js, Tailwind CSS, and Framer Motion. Fully responsive with dark mode.",
     tags: ["Next.js", "Tailwind", "Framer Motion"],
     link: "https://yourportfolio.vercel.app",
   },
   {
-    title: "E-commerce Admin Dashboard",
+    title: "Rule Zero",
+    description:
+      "An admin dashboard to manage products, users, and orders. Developed with Redux Toolkit and REST APIs.",
+    tags: ["Next.js", "Redux", "REST API"],
+    link: "https://github.com/yourusername/ecommerce-admin",
+  },
+  {
+    title: "Fitness By Wafir",
     description:
       "An admin dashboard to manage products, users, and orders. Developed with Redux Toolkit and REST APIs.",
     tags: ["Next.js", "Redux", "REST API"],
