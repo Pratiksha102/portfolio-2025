@@ -7,15 +7,16 @@ const caseStudies = [
   {
     title: "User Retention Strategy for Fitness App",
     summary:
-      "Led research and implemented habit-forming features that improved user retention by 30%.",
-    link: "/case-studies/fitness-retention", // assuming internal page
-  },
+      "In this case study, I led a research initiative to identify pain points and opportunities for improving user retention in a fitness app. I implemented habit-forming features such as personalized workout reminders, progress tracking, and community-driven challenges. These features were designed to keep users engaged by reinforcing positive behaviors and encouraging consistency. The strategy led to a 30% improvement in user retention, showcasing the impact of tailored, user-centered design on long-term engagement.",
+    link: "#", // assuming internal page
+  }
+,  
   {
     title: "Transport Simple",
     summary:
-      "Analyzed drop-offs and redesigned the payment flow, increasing successful checkouts by 22%.",
-    link: "/assets/TransportSimpleDeck.pdf", // change this path if needed
-  },
+      "This case study focuses on improving user engagement by redesigning the payment flow and suggesting key features for the platform. Notable suggestions include a Smart Reminder Engine that notifies users of service due dates, insurance expiries, and permit renewals, as well as a Digital Vault to store and upload compliance documents like insurance and PUC. These features aim to enhance user convenience and streamline compliance management.",
+    link: "/assets/TransportSimpleDeck.pdf", // Make sure this path is correct for your project
+  }
 ];
 
 const CaseStudies = () => {
@@ -65,7 +66,7 @@ const CaseStudies = () => {
                 className="text-sm font-medium text-white hover:underline"
                 aria-label={`Read case study: ${caseStudy.title}`}
               >
-                Read more →
+                   {caseStudy.link === "#" ? "" : "Read More →"}
               </a>
             </Card>
           </motion.div>

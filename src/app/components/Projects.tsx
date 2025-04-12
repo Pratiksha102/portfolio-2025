@@ -6,37 +6,36 @@ const projects = [
   {
     title: "MOC Oncocare Center",
     description:
-      "A comprehensive hospital management app built using React and Firebase. Includes appointment scheduling, patient records, and dashboards.",
-    tags: ["React", "Firebase", "Tailwind"],
-    link: "https://github.com/yourusername/hospital-app",
+      "A comprehensive hospital management app built using React, Redux, and MSAL for secure authentication. Features include appointment scheduling, patient records, and data dashboards.",
+    tags: ["React", "Redux", "MSAL", "Tailwind"],
+    link: "#",
   },
   {
     title: "BYG Brewsky (Bob's Bar, Jollygunj)",
     description:
-      "My personal portfolio built with Next.js, Tailwind CSS, and Framer Motion. Fully responsive with dark mode.",
-    tags: ["Next.js", "Tailwind", "Framer Motion"],
-    link: "https://yourportfolio.vercel.app",
+      "Restaurant management interfaces developed with React, Redux Toolkit, and Tailwind. Focused on responsive, scalable UI with clean state management.",
+    tags: ["React", "Redux Toolkit", "Tailwind"],
+    link: "#",
   },
   {
     title: "Rule Zero",
     description:
-      "An admin dashboard to manage products, users, and orders. Developed with Redux Toolkit and REST APIs.",
-    tags: ["Next.js", "Redux", "REST API"],
-    link: "https://github.com/yourusername/ecommerce-admin",
+      "An admin dashboard built using Next.js and shadcn/ui. Supports managing users, orders, and product inventory efficiently.",
+    tags: ["Next.js", "shadcn/ui", "TypeScript"],
+    link: "#",
   },
   {
     title: "Fitness By Wafir",
     description:
-      "An admin dashboard to manage products, users, and orders. Developed with Redux Toolkit and REST APIs.",
-    tags: ["Next.js", "Redux", "REST API"],
-    link: "https://github.com/yourusername/ecommerce-admin",
-  },
+      "A fullstack fitness platform built with Next.js and Supabase, featuring Google Authentication and Razorpay integration for secure user logins and seamless plan purchases.",
+    tags: ["Next.js", "Supabase", "Google Auth", "Razorpay", "Tailwind"],
+    link: "https://fitness-forever.vercel.app/",
+  }
 ];
 
 const Projects = () => {
   return (
     <section className="bg-black py-16 px-6 md:px-12 relative overflow-hidden">
-      {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-black opacity-40 animate-gradient" />
 
       <h2 className="text-4xl font-bold text-center mb-16 text-white tracking-wider">
@@ -81,7 +80,8 @@ const Projects = () => {
                 className="text-sm font-medium text-white hover:underline"
                 aria-label={`View project: ${project.title}`}
               >
-                View Project →
+                              {project.link === "#" ? "" : "View Project →"}
+
               </a>
             </Card>
           </motion.div>
