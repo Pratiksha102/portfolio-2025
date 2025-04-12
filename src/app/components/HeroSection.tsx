@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Sora } from "next/font/google";
 
@@ -25,7 +24,6 @@ const HeroSection = () => {
         setIndex((prev) => prev + 1);
       }, 100);
     } else {
-      // After typing is complete, reset after a delay
       timeout = setTimeout(() => {
         setDisplayedText("");
         setIndex(0);
@@ -37,47 +35,42 @@ const HeroSection = () => {
 
   return (
     <section className="bg-black py-28 px-6 text-white relative overflow-hidden">
-      {/* Gradient Background Animation with Purple and Black */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-black opacity-40 animate-gradient" />
-      <div className="max-w-6xl mx-auto flex flex-col items-center text-center space-y-12">
-        <motion.div
+      {/* Gradient Background Animation */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-black opacity-40 animate-gradient z-0" />
+
+      {/* Content */}
+      <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center text-center space-y-8">
+        <motion.h1
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: false }}
+          className={`${sora.className} text-5xl md:text-6xl font-bold leading-tight text-white tracking-tight`}
         >
-          <Card className="bg-transparent border border-white/20 shadow-xl backdrop-blur-md">
-            <CardContent className="p-10 md:p-16">
-              <h1
-                className={`${sora.className} text-5xl md:text-6xl font-bold leading-tight text-white tracking-tight`}
-              >
-                {displayedText}
-                <span className="animate-pulse">|</span>
-              </h1>
+          {displayedText}
+          <span className="animate-pulse">|</span>
+        </motion.h1>
 
-              <p
-                className={`${sora.className} text-lg md:text-xl mt-6 text-gray-300 leading-relaxed max-w-2xl mx-auto`}
-              >
-                A Frontend Developer passionate about crafting sleek,
-                user-centric web experiences with modern tools and pixel-perfect
-                precision.
-              </p>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className={`${sora.className} text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl`}
+        >
+        Passionate about crafting intuitive user experiences, building scalable web applications, and shaping products that solve real problems—blending design thinking, development, and product strategy.
+        </motion.p>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="mt-10"
-              >
-                <Button
-                  asChild
-                  className="bg-purple-600 text-white font-bold px-8 py-4 rounded-full hover:bg-purple-500 transition-all shadow-lg"
-                >
-                  <a href="#projects">View My Work</a>
-                </Button>
-              </motion.div>
-            </CardContent>
-          </Card>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          <Button
+            asChild
+            className="bg-purple-600 text-white font-bold px-8 py-4 rounded-full hover:bg-purple-500 transition-all shadow-lg"
+          >
+            <a href="#projects">View My Work</a>
+          </Button>
         </motion.div>
       </div>
     </section>
