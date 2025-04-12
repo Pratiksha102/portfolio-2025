@@ -8,20 +8,22 @@ const caseStudies = [
     title: "User Retention Strategy for Fitness App",
     summary:
       "Led research and implemented habit-forming features that improved user retention by 30%.",
-    link: "/case-studies/fitness-retention",
+    link: "/case-studies/fitness-retention", // assuming internal page
   },
   {
     title: "Transport Simple",
     summary:
       "Analyzed drop-offs and redesigned the payment flow, increasing successful checkouts by 22%.",
-    link: "/case-studies/checkout-optimization",
+    link: "/assets/TransportSimpleDeck.pdf", // change this path if needed
   },
- 
 ];
 
 const CaseStudies = () => {
   return (
-    <section className="bg-black py-20 px-6 md:px-12 relative overflow-hidden" id="case-studies">
+    <section
+      className="bg-black py-20 px-6 md:px-12 relative overflow-hidden"
+      id="case-studies"
+    >
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-black opacity-40 animate-gradient" />
 
@@ -48,7 +50,8 @@ const CaseStudies = () => {
             <Card
               className="group relative backdrop-blur-md bg-white/10 border border-white/30 rounded-lg p-6 shadow-lg transition-all duration-300 hover:bg-white/20 hover:scale-105"
               style={{
-                boxShadow: "0 0 10px rgba(255, 255, 255, 0.4), 0 0 20px rgba(255, 255, 255, 0.2)",
+                boxShadow:
+                  "0 0 10px rgba(255, 255, 255, 0.4), 0 0 20px rgba(255, 255, 255, 0.2)",
               }}
             >
               <h3 className="text-2xl font-semibold text-white group-hover:text-gray-200 transition">
@@ -57,6 +60,8 @@ const CaseStudies = () => {
               <p className="text-white/80 mb-4">{caseStudy.summary}</p>
               <a
                 href={caseStudy.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-sm font-medium text-white hover:underline"
                 aria-label={`Read case study: ${caseStudy.title}`}
               >
