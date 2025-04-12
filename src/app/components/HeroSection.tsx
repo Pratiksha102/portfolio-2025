@@ -36,7 +36,9 @@ const HeroSection = () => {
   }, [index]);
 
   return (
-    <section className="bg-black py-28 px-6 text-white">
+    <section className="bg-black py-28 px-6 text-white relative overflow-hidden">
+      {/* Gradient Background Animation with Purple and Black */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-black opacity-40 animate-gradient" />
       <div className="max-w-6xl mx-auto flex flex-col items-center text-center space-y-12">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -44,7 +46,7 @@ const HeroSection = () => {
           transition={{ duration: 0.7 }}
           viewport={{ once: false }}
         >
-          <Card className="bg-transparent border border-white/10 shadow-xl backdrop-blur-md">
+          <Card className="bg-transparent border border-white/20 shadow-xl backdrop-blur-md">
             <CardContent className="p-10 md:p-16">
               <h1
                 className={`${sora.className} text-5xl md:text-6xl font-bold leading-tight text-white tracking-tight`}
@@ -61,14 +63,19 @@ const HeroSection = () => {
                 precision.
               </p>
 
-              <div className="mt-10">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                className="mt-10"
+              >
                 <Button
                   asChild
-                  className="bg-white text-black font-bold px-8 py-4 rounded-full hover:bg-gray-200 transition-all shadow-lg"
+                  className="bg-purple-600 text-white font-bold px-8 py-4 rounded-full hover:bg-purple-500 transition-all shadow-lg"
                 >
                   <a href="#projects">View My Work</a>
                 </Button>
-              </div>
+              </motion.div>
             </CardContent>
           </Card>
         </motion.div>

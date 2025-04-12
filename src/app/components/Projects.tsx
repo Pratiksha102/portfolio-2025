@@ -1,6 +1,6 @@
 "use client";
-
 import { motion } from "framer-motion";
+import { Card } from "@/components/ui/card";
 
 const projects = [
   {
@@ -28,8 +28,11 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="bg-black text-yellow-400 py-16 px-6 md:px-12">
-      <h2 className="text-4xl font-bold text-center mb-16 text-yellow-300 tracking-wider">
+    <section className="bg-black py-16 px-6 md:px-12 relative overflow-hidden">
+      {/* Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-black opacity-40 animate-gradient" />
+
+      <h2 className="text-4xl font-bold text-center mb-16 text-white tracking-wider">
         Projects
       </h2>
 
@@ -41,30 +44,39 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="bg-yellow-900/10 border border-yellow-700 rounded-xl p-6 shadow-md hover:shadow-yellow-600/20 transition-shadow"
+            className="group z-10"
           >
-            <h3 className="text-2xl font-semibold text-yellow-200 mb-2">
-              {project.title}
-            </h3>
-            <p className="text-yellow-100 mb-4">{project.description}</p>
-            <div className="flex flex-wrap gap-2 mb-4">
-              {project.tags.map((tag, i) => (
-                <span
-                  key={i}
-                  className="bg-yellow-700 text-black text-xs font-semibold px-2 py-1 rounded"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium text-yellow-400 hover:underline"
+            <Card
+              className="group relative backdrop-blur-md bg-white/10 border border-white/30 rounded-lg p-6 shadow-lg transition-all duration-300 hover:bg-white/20 hover:scale-105"
+              style={{
+                boxShadow:
+                  "0 0 10px rgba(255, 255, 255, 0.4), 0 0 20px rgba(255, 255, 255, 0.2)",
+              }}
             >
-              View Project →
-            </a>
+              <h3 className="text-2xl font-semibold text-white group-hover:text-gray-200 transition">
+                {project.title}
+              </h3>
+              <p className="text-white/80 mb-4">{project.description}</p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project.tags.map((tag, i) => (
+                  <span
+                    key={i}
+                    className="bg-white/20 text-white text-xs font-semibold px-2 py-1 rounded"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-white hover:underline"
+                aria-label={`View project: ${project.title}`}
+              >
+                View Project →
+              </a>
+            </Card>
           </motion.div>
         ))}
       </div>

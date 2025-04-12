@@ -25,7 +25,10 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section className="bg-black text-white py-16 px-6 md:px-12">
+    <section className="bg-black py-16 px-6 md:px-12 relative overflow-hidden">
+      {/* Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-black opacity-40 animate-gradient" />
+      
       <h2 className="text-4xl font-bold text-center mb-16 text-gray-200 tracking-wider">
         Experience
       </h2>
