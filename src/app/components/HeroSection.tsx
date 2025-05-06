@@ -12,23 +12,23 @@ const sora = Sora({
 const HeroSection = () => {
   return (
     <section className="relative bg-black py-28 px-6 text-white overflow-hidden">
-      {/* Gradient Animation Layer */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-700/20 to-pink-600/10 animate-pulse blur-xl z-0" />
+      {/* Purple-Black Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 to-black/80 animate-pulse blur-xl z-0" />
 
       {/* Hero Content */}
       <div className="relative z-10 max-w-5xl mx-auto text-center space-y-10">
-        {/* Gradient Text */}
+        {/* Purple Gradient Heading */}
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: false }}
-          className={`${sora.className} text-5xl md:text-6xl font-extrabold leading-tight tracking-tight bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent`}
+          className={`${sora.className} text-5xl md:text-6xl font-extrabold leading-tight tracking-tight bg-gradient-to-r from-purple-500 to-purple-300 bg-clip-text text-transparent`}
         >
           Hi, I’m Pratiksha
         </motion.h1>
 
-        {/* Description */}
+        {/* Subtitle */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

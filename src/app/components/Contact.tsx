@@ -21,15 +21,15 @@ const Contact = () => {
       {/* Foreground Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center space-y-10">
         {/* Title */}
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className={`${sora.className} text-5xl md:text-6xl font-extrabold leading-tight tracking-tight bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent`}
-        >
-          Let’s Connect
-        </motion.h2>
+       <motion.h2
+                 initial={{ opacity: 0, y: -20 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 transition={{ duration: 0.6 }}
+                 viewport={{ once: false }}
+                 className={`${sora.className} text-5xl md:text-6xl font-extrabold leading-tight tracking-tight bg-gradient-to-r from-purple-500 to-purple-300 bg-clip-text text-transparent`}
+               >
+                 Let's connect
+               </motion.h2>
 
         {/* Description */}
         <motion.p
