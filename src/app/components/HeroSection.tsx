@@ -1,10 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
 import { Sora } from "next/font/google";
-import { Link } from "react-scroll"; // Importing Link from react-scroll
+import { Link } from "react-scroll";
 
 const sora = Sora({
   subsets: ["latin"],
@@ -12,66 +10,45 @@ const sora = Sora({
 });
 
 const HeroSection = () => {
-  const fullText = "Hi, I’m Pratiksha";
-  const [displayedText, setDisplayedText] = useState("");
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    let timeout: NodeJS.Timeout;
-
-    if (index < fullText.length) {
-      timeout = setTimeout(() => {
-        setDisplayedText((prev) => prev + fullText.charAt(index));
-        setIndex((prev) => prev + 1);
-      }, 100);
-    } else {
-      timeout = setTimeout(() => {
-        setDisplayedText("");
-        setIndex(0);
-      }, 1500);
-    }
-
-    return () => clearTimeout(timeout);
-  }, [index]);
-
   return (
-    <section className="bg-black py-28 px-6 text-white relative overflow-hidden">
-      {/* Gradient Background Animation */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-black opacity-40 animate-gradient z-0" />
+    <section className="relative bg-black py-28 px-6 text-white overflow-hidden">
+      {/* Gradient Animation Layer */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-700/20 to-pink-600/10 animate-pulse blur-xl z-0" />
 
-      {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center text-center space-y-8">
+      {/* Hero Content */}
+      <div className="relative z-10 max-w-5xl mx-auto text-center space-y-10">
+        {/* Gradient Text */}
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: false }}
-          className={`${sora.className} text-5xl md:text-6xl font-bold leading-tight text-white tracking-tight`}
+          className={`${sora.className} text-5xl md:text-6xl font-extrabold leading-tight tracking-tight bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent`}
         >
-          {displayedText}
-          <span className="animate-pulse">|</span>
+          Hi, I’m Pratiksha
         </motion.h1>
 
+        {/* Description */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className={`${sora.className} text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl`}
+          className={`${sora.className} text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto`}
         >
-          Passionate about crafting intuitive user experiences, building scalable web applications, and shaping products that solve real problems—blending design thinking, development, and product strategy.
+          I craft intuitive interfaces, build scalable web apps, and shape digital products that solve real-world problems—merging design thinking with technical excellence.
         </motion.p>
 
+        {/* CTA Button */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          {/* Scroll to Projects section using react-scroll */}
           <Link
-            to="projects" // 'projects' is the ID of the section you want to scroll to
-            smooth={true} // Enables smooth scrolling
-            duration={500} // Time for scroll animation
-            className="bg-purple-600 text-white font-bold px-8 py-4 rounded-full hover:bg-purple-500 transition-all shadow-lg cursor-pointer"
+            to="projects"
+            smooth={true}
+            duration={500}
+            className="inline-block bg-purple-600 hover:bg-purple-700 transition-all text-white font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl"
           >
             View My Work
           </Link>

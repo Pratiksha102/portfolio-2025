@@ -10,7 +10,7 @@ export default function Page() {
      <HeroSection />
      <Experience />
       <Projects />
-      <CaseStudies/>
+      {/* <CaseStudies/> */}
       <Contact />
   </>
 }
